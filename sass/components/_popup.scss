@@ -9,7 +9,9 @@
     opacity: 0;
     visibility: hidden;
     transition: all .3s;
-
+    @include respond(tabport) {
+        text-align: center;
+    }
 
     &__content{
         @include centerContent;
@@ -27,6 +29,10 @@
     &__left{
         width: 40%;
         display: table-cell;
+
+        @include respond(tabport) {
+            display: none;
+        }
     }
 
     &__right{
@@ -41,6 +47,9 @@
         width: 100%;
         margin: 0;
         padding: 0;
+        @include respond(tabland) {
+            height: auto;
+        }
     }
 
     &__text{
@@ -54,6 +63,9 @@
         -webkit-hyphens: auto;
         -moz-hyphens: auto;
         -ms-hyphens: auto;
+        @include respond(phone){
+            column-count: 1;
+        }
     }
 
     //Functionality OPEN State

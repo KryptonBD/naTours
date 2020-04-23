@@ -4,6 +4,13 @@
 
   &:not(:last-child) {
     margin-bottom: $gap-vertical;
+    @include respond(tabport) {
+      margin-bottom: $gap-vertical-small;
+    }
+  }
+  @include respond(tabport) {
+    max-width: 50rem;
+    padding: 0 3rem;
   }
 
   @include clearfix;
@@ -19,6 +26,14 @@
 
     &:not(:last-child) {
       margin-right: $gap-horizontal;
+      @include respond(tabport) {
+        margin-right: 0;
+        margin-bottom: $gap-vertical-small;
+      }
+    }
+
+    @include respond(tabport) {
+      width: 100% !important;
     }
   }
 
